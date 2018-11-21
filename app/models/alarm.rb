@@ -3,6 +3,8 @@ class Alarm < ApplicationRecord
 
   has_many :upvotes
 
+  validates_presence_of :message
+
   before_save :upper_case
   after_commit :post_to_API
 
